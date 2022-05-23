@@ -21,6 +21,8 @@ import {AngularFireAuthModule} from '@angular/fire/auth';
 import {StoreModule} from '@ngrx/store';
 import {appReducers} from './app.reducer';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import {OrdenIngresoPipe} from './pipes/orden-ingreso.pipe';
+import {ChartsModule} from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
     FooterComponent,
     NavbarComponent,
     SidebarComponent,
+    OrdenIngresoPipe,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +51,7 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
       maxAge: 25,
       logOnly: environment.production,
     }),
+    ChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
